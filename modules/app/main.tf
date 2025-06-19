@@ -15,9 +15,12 @@ resource "azurerm_linux_web_app" "this" {
   service_plan_id = azurerm_service_plan.this.id
 
   site_config {
-    
+    vnet_route_all_enabled = true    
+    always_on             = true
+    ftps_state            = "Disabled"
+    http2_enabled         = true
   }
-
+  
   app_settings = {
     "WEBSITES_ENABLE_APP_SERVICE_STORAGE" = "false"
     "WEBSITES_PORT"                       = "80"
