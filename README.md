@@ -11,7 +11,8 @@ Este proyecto implementa una arquitectura escalable y segura de Moodle LMS en Mi
 │   ├── network/
 │   ├── db/
 │   ├── app/
-│   └── storage/
+│   ├── storage/
+│   └── vm/
 ```
 
 ## 📦 Módulos Incluidos
@@ -20,6 +21,7 @@ Este proyecto implementa una arquitectura escalable y segura de Moodle LMS en Mi
 - **DB**: Azure Database for MySQL Flexible Server.
 - **App**: App Service Plan (Linux) y App Service (PHP).
 - **Storage**: Azure File Share para `moodledata`.
+- **VM**: Linux virtual machine con acceso SSH.
 
 ## 🚀 Requisitos
 
@@ -39,6 +41,8 @@ Este proyecto implementa una arquitectura escalable y segura de Moodle LMS en Mi
    name_prefix    = "moodle-prod"
    location       = "East US"
    admin_password = "StrongPasswordHere"
+   vm_username    = "azureuser"
+   vm_password    = "ChangeMeP@ssword1!"
    ```
 
 3. Inicializa Terraform:
@@ -67,6 +71,7 @@ Este proyecto implementa una arquitectura escalable y segura de Moodle LMS en Mi
 - URL del App Service
 - Nombre del grupo de recursos
 - FQDN de la base de datos MySQL
+- IP pública de la VM
 
 ## 🧹 Limpieza
 
