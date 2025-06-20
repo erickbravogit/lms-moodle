@@ -13,13 +13,9 @@ variable "rg_name" {
   type        = string
 }
 
-variable "peer_vnet_name" {
-  description = "Name of the VNet to peer with"
-  type        = string
-}
 
-variable "peer_rg_name" {
-  description = "Resource group name of the peer VNet"
+variable "subnet_id" {
+  description = "ID of the subnet where the VM will be deployed"
   type        = string
 }
 

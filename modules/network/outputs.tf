@@ -22,3 +22,7 @@ output "subnet_appgateway_id" {
 output "subnet_bastion_id" {
   value = azurerm_subnet.bastion.id
 }
+
+output "subnet_vm_id" {
+  value = azurerm_subnet.vm.id
+}
