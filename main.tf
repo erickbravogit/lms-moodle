@@ -73,8 +73,7 @@ module "vm" {
   name_prefix   = var.name_prefix
   location      = var.location
   rg_name       = module.network.rg_name
-  peer_vnet_name = module.network.vnet_name
-  peer_rg_name   = module.network.rg_name
+  subnet_id     = module.network.subnet_vm_id
   vm_username   = var.vm_username
   vm_password   = var.vm_password
 }
